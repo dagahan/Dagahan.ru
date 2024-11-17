@@ -19,7 +19,6 @@ class Particle {
         this.x += this.speedX;
         this.y += this.speedY;
 
-        // Respawn particle if it moves out of bounds
         if (this.x > canvas.width || this.x < 0) {
             this.x = Math.random() * canvas.width;
         }
@@ -29,7 +28,7 @@ class Particle {
     }
 
     draw() {
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.8)'; /* Black particles */
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
